@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62,5%;
+}
+
+.margen {
+    margin: 5rem 0rem 5rem 0rem;
+
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4rem 8rem 4rem 8rem;
+}
+
+.flex2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 4rem 8rem 4rem 8rem;
+}
+.btn {
+    margin: 1rem 0rem 1rem 0rem;
+}
+.boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+label {
+    margin: 0rem 1rem 1rem 1rem;
+}
+#precioFinal  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 3rem;
+    font-size: 2rem;
+    color: white;
+}
+
+#seleccion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 3rem;
+    font-size: 1rem;
+    color: white;  
+}
+
+.rectangulo {
+    width: auto;
+    height: auto;
+    background-color: rgb(35, 155, 155);
+    padding: 3rem;
+}
+
+#datos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-carro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+}
+.imagen-carro {
+    width: 250px;
+    height: 180px;
+    margin: 0rem 2rem;
+}
+
+tr {
+    background-color: white;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.espacio {
+    margin: 1rem 1rem 1rem 0rem;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/popper.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/sweetalert2.min.css">
+
+    <title> Procesar compra </title>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row justify-content-between mb-5">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <div class="row align-items-stretch justify-content-between">
+                        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                            <a class="navbar-brand active" href="../index.html"
+                  ><img src="../imagenes/LOGO.png" alt="logo" width="250px"
+                  /></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                  <a class="nav-link" aria-current="page" href="quienesSomos.html"
+                                    >Quienes somos</a
+                                  >
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="envios.html">Envíos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="shop.html">Shop</a>
+                                  </li>
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+    </header>
+
+    <br>
+
+    <main>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+                    <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
+                        <div class="form-group row">
+                            <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="text" class="form-control" id="cliente"
+                                    placeholder="Ingresa nombre cliente" name="destinatario">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo" name="cc_to">
+                            </div>
+                        </div>
+                        <div class="form-group row" >
+                            <label for="email" class="col-12 col-md-4 col-form-label h2"> Ingresá una nueva tarjeta</label>
+                            <div class="col-12 col-md-10 espacio">
+                                <input type="text" class="form-control" id="NdeTarjeta" placeholder="Número de tarjeta" name="cc_to">
+                            </div>
+                            <div class="col-12 col-md-10 espacio">
+                                <input type="text" class="form-control" id="NombreYApellido" placeholder="Nombre y Apellido" name="cc_to">
+                            </div>
+                            <div class="col-12 col-md-10 espacio">
+                                <input type="date" class="form-control" id="Fecha" placeholder="Fecha de expiración" name="cc_to">
+                            </div>
+                            <div class="col-12 col-md-10 espacio">
+                                <input type="text" class="form-control" id="Codigo" placeholder="Código de Seguridad" name="cc_to">
+                           </div>
+                           <div class="col-12 col-md-10 espacio">
+                                <input type="text" class="form-control" id="DNI" placeholder="DNI del titular de la tarjeta" name="cc_to">
+                            </div>
+                        </div>
+                            <button  id="tarjeta" class="btn btn-info btn-block"> Agregar Tarjeta</button>
+                        </div>
+
+
+                        <div id="carrito" class="form-group table-responsive" >
+                            <table class="table" id="lista-compra" >
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Sub Total</th>
+                                        <th scope="col">Eliminar</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody >
+
+                                </tbody>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                                    <th scope="col">
+                                        <p id="subtotal"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">IVA :</th>
+                                    <th scope="col">
+                                        <p id="iva"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                                    <th scope="col">
+                                        <input id="total" name="monto" class="font-weight-bold border-0" readonly style="background-color: white;"></input>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+
+                            </table>
+                        </div>
+
+
+                        <div class="row justify-content-between">
+                            <div class="botones">
+                                <a href="shop.html" class="btn btn-info btn-block">Seguir comprando</a>
+                            </div>
+                            <div class="botones">
+                                <button  class="btn btn-success btn-block" id="procesar-compra">Finalizar compra</a></button>
+                            </div>
+                        </div>                            
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+
+    </div>
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/sweetalert2.min.js"></script>
+    
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+
+    <script type="text/javascript" src="../js/carrito.js"></script>
+    <script type="text/javascript" src="../js/compra.js"></script>
+    <script  type="text/javascript" src="../js/pedido.js"></script>
+
+
+</body>
+
+</html>
